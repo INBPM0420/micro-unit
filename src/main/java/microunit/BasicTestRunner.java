@@ -41,7 +41,7 @@ public class BasicTestRunner extends TestRunner {
             System.out.printf("Tests run: %d\n", numberOfTests);
             System.out.printf("Failures: %d\n", numberOfFailures);
             System.out.printf("Errors: %d\n", numberOfErrors);
-        } catch (ReflectiveOperationException e) {
+        } catch (ReflectiveOperationException | IllegalArgumentException e) {
             throw new InvalidTestClassException(e);
         }
     }
